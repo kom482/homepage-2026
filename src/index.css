@@ -1,0 +1,103 @@
+:root {
+  /* ---- Original palette, lightly refreshed ---- */
+  --paper: #ffffff;
+  --paper-2: #fafafa;
+  --ink: #2e2e2e;
+  --ink-soft: #5b5b5b;
+  --ink-faint: #8c8c8c;
+  --yellow: #f3df49;
+  --yellow-deep: #ecd42f;
+  --yellow-soft: #fdf7c9;
+  --gray: #eeeeee;
+  --line: #e7e7e7;
+  /* medical-imaging accent — the one modern note */
+  --teal: #0d9488;
+  --teal-deep: #0b7d72;
+
+  --radius: 14px;
+  --radius-sm: 10px;
+  --maxw: 1180px;
+  --header-h: 60px;
+
+  --shadow-sm: 0 2px 10px rgba(46, 46, 46, 0.06);
+  --shadow: 0 10px 30px -14px rgba(46, 46, 46, 0.25);
+
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-title: "M PLUS Rounded 1c", "Inter", system-ui, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--ink);
+  background-color: var(--paper);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* print / screen visibility helpers (see @media print in App.css) */
+.print-only {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-h);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--paper);
+  color: var(--ink);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: var(--font-title);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--teal);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--teal-deep);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--yellow);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
